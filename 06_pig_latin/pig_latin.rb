@@ -6,16 +6,12 @@ def translate(s)
 	tdt.each do |v|
 		tab = v.split('')
 		i = tab.length
-		k = 0
 		j = 0
-		if tvoy.include?(tab[0])
-			j = 0
-		elsif tvoy.include?(tab[1])
-			j = 1
-		elsif tvoy.include?(tab[2])
-			j = 2
-		elsif tvoy.include?(tab[3])
-			j = 3
+		tab.each do |x|
+			if tvoy.include?(x)
+				break
+			end
+			j += 1
 		end
 		while j > 0
 			k = tab[0]
